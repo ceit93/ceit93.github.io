@@ -10,13 +10,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'آیین فارغ‌التحصیلی دانشجویان ورودی ۱۳۹۳',
+    title: 'مجله فارغ‌التحصیلی دانشجویان ورودی ۱۳۹۳',
     meta: [
       {charset: 'utf-8'},
       {name: 'viewport', content: 'width=device-width, initial-scale=1'},
       {name: 'msapplication-TileColor', content: '#ffffff'},
       {name: 'theme-color', content: '#ffffff'},
-      {hid: 'description', name: 'description', content: 'مجله فارغ‌التحصیلی دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر'},
+      {hid: 'description', name: 'description', content: 'مجله فارغ‌التحصیلی دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)'},
       {property: 'og:locale', content: 'fa_IR'},
     ],
     link: [

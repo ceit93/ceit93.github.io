@@ -9,20 +9,20 @@
         </v-flex>
       </v-layout>
       <v-layout row wrap align-center justify-center>
-        <!--<v-flex xs6 sm4 md3 lg2 v-for="(item, index) in studentsArray" :key="index">-->
-          <!--<div class="text-xs-center no-underline">-->
-            <!--<nuxt-link :to="'/' + item.username">-->
-              <!--<v-avatar size="80%">-->
-                <!--<img-->
-                  <!--class="elevation-7 mb-1"-->
-                  <!--width="100%"-->
-                  <!--:src="$helper.avatar(item)">-->
-              <!--</v-avatar>-->
-              <!--<h3 class="iranblack light-blue&#45;&#45;text text&#45;&#45;darken-3">{{$persianJS.userName(item)}}</h3>-->
-              <!--<p class="iranblack caption text-xs-center grey&#45;&#45;text pt-1 pb-3">{{$persianJS.englishNumber(item.std_numbers)}}</p>-->
-            <!--</nuxt-link>-->
-          <!--</div>-->
-        <!--</v-flex>-->
+        <v-flex xs6 sm4 md3 lg2 v-for="(item, index) in studentsArray" :key="index">
+          <div class="text-xs-center no-underline">
+            <nuxt-link :to="'/' + item.username">
+              <v-avatar size="80%">
+                <img
+                  class="elevation-7 mb-1"
+                  width="100%"
+                  :src="$helper.avatar(item)">
+              </v-avatar>
+              <h3 class="iranblack light-blue--text text--darken-3">{{$persianJS.userName(item)}}</h3>
+              <p class="iranblack caption text-xs-center grey--text pt-1 pb-3">{{$persianJS.englishNumber(item.std_numbers)}}</p>
+            </nuxt-link>
+          </div>
+        </v-flex>
       </v-layout>
     </v-container>
   </v-content>
@@ -30,6 +30,44 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      students: [],
+      button: {
+        hidden: true,
+        title: 'تکمیل محتوا',
+        outline: false,
+        disabled: true,
+        to: '/content',
+      },
+    }
+  },
+  computed: {
+    studentsArray : function() {
+      let res = []
+      for (let person of this.people){
+        person.name = this.$persianJS.userName(person)
+        person.avatar = this.$helper.avatar(person)
+        res.push(person)
+      }
+      res = this.$helper.sortBy(res, 'std_numbers')
+      return res
+    },
+  },
+  async asyncData (context) {
+    return context.$axios.get('/people/index.json')
+      .then((res) => {
+        return {people: res.data}
+      }).catch(e => {
+        console.log(e)
+        context.error({statusCode: 500, message: e})
+      })
+  },
 }
 </script>
+
+<style>
+  .no-underline > a{
+    text-decoration: none;
+  }
+</style>

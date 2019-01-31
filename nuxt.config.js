@@ -56,7 +56,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    '@/plugins/vuetify',
+    '@/plugins/helper/index.js'
   ],
 
   /*
@@ -66,6 +67,15 @@ module.exports = {
     '@nuxtjs/axios',
     ['@nuxtjs/google-analytics', {id: 'UA-120518365-1'}]
   ],
+
+  axios: {
+    port: '3000',
+    prefix: '/data/',
+    https: true,
+    proxyHeaders: false,
+    proxy: true, // Can be also an object with default options
+    debug: false
+  },
 
   /*
   ** Build configuration

@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.0",
     "@nuxtjs/axios": "^5.3.6",
     "@nuxtjs/google-analytics": "^2.0.2",
     "cross-env": "^5.2.0",

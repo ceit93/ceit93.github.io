@@ -1,11 +1,11 @@
 <template>
-  <v-app>
+  <v-app app>
     <top-header></top-header>
-    <v-container fluid full-height>
-      <v-content style="height: 100%">
-        <nuxt/>
-      </v-content>
-    </v-container>
+    <v-content>
+      <v-container fluid full-height>
+          <nuxt/>
+      </v-container>
+    </v-content>
     <bottom-footer></bottom-footer>
   </v-app>
 </template>

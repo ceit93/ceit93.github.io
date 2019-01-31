@@ -38,6 +38,7 @@ module.exports = {
   css: [
     '@/assets/css/main.scss',
     '@/assets/css/iransharp.css',
+    '@/assets/style/app.styl'
   ],
   render: {
     bundleRenderer: {

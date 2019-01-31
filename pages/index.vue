@@ -1,59 +1,31 @@
 <template>
-  <v-layout
-    column
-    justify-center
-    align-center
-  >
-    <v-flex
-      xs12
-      sm8
-      md6
-    >
-      <v-card>
-        <v-card-title class="headline">Welcome to the Vuetify + Nuxt.js template</v-card-title>
-        <v-card-text>
-          <p>Vuetify is a progressive Material Design component framework for Vue.js. It was designed to empower developers to create amazing applications.</p>
-          <p>For more information on Vuetify, check out the <a
-            href="https://vuetifyjs.com"
-            target="_blank"
-          >documentation</a>.</p>
-          <p>If you have questions, please join the official <a
-            href="https://chat.vuetifyjs.com/"
-            target="_blank"
-            title="chat"
-          >discord</a>.</p>
-          <p>Find a bug? Report it on the github <a
-            href="https://github.com/vuetifyjs/vuetify/issues"
-            target="_blank"
-            title="contribute"
-          >issue board</a>.</p>
-          <p>Thank you for developing with Vuetify and I look forward to bringing more exciting features in the future.</p>
-          <div class="text-xs-right">
-            <em><small>&mdash; John Leider</small></em>
-          </div>
-          <hr class="my-3">
-          <a
-            href="https://nuxtjs.org/"
-            target="_blank"
-          >Nuxt Documentation</a>
-          <br>
-          <a
-            href="https://github.com/nuxt/nuxt.js"
-            target="_blank"
-          >Nuxt GitHub</a>
-        </v-card-text>
-        <v-card-actions>
-          <v-spacer />
-          <v-btn
-            color="primary"
-            flat
-            nuxt
-            to="/inspire"
-          >Continue</v-btn>
-        </v-card-actions>
-      </v-card>
-    </v-flex>
-  </v-layout>
+  <v-content>
+    <v-container>
+      <v-layout row wrap align-center justify-center class="mb-3">
+        <v-flex xs11 class="text-xs-center">
+          <h1 class="iranblack blue--text text--darken-3">جامعه دانش‌آموختگان ورودی سال ۱۳۹۳</h1>
+          <h2 class="iranblack">دانشکده مهندسی کامپیوتر و فناوری اطلاعات</h2>
+          <h3 class="iranblack">دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)</h3>
+        </v-flex>
+      </v-layout>
+      <v-layout row wrap align-center justify-center>
+        <!--<v-flex xs6 sm4 md3 lg2 v-for="(item, index) in studentsArray" :key="index">-->
+          <!--<div class="text-xs-center no-underline">-->
+            <!--<nuxt-link :to="'/' + item.username">-->
+              <!--<v-avatar size="80%">-->
+                <!--<img-->
+                  <!--class="elevation-7 mb-1"-->
+                  <!--width="100%"-->
+                  <!--:src="$helper.avatar(item)">-->
+              <!--</v-avatar>-->
+              <!--<h3 class="iranblack light-blue&#45;&#45;text text&#45;&#45;darken-3">{{$persianJS.userName(item)}}</h3>-->
+              <!--<p class="iranblack caption text-xs-center grey&#45;&#45;text pt-1 pb-3">{{$persianJS.englishNumber(item.std_numbers)}}</p>-->
+            <!--</nuxt-link>-->
+          <!--</div>-->
+        <!--</v-flex>-->
+      </v-layout>
+    </v-container>
+  </v-content>
 </template>
 
 <script>

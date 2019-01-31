@@ -8,7 +8,7 @@
           <img src="logo.png" alt="بهترین وب‌اپلیکیشن فارغ‌التحصیلی">
         </v-avatar>
       </v-btn>
-      <v-toolbar-title v-text="title" class="title"></v-toolbar-title>
+      <v-toolbar-title v-text="title" class="title iransharp"></v-toolbar-title>
       <v-spacer></v-spacer>
       <v-toolbar-items class="hidden-sm-and-down">
         <v-btn flat v-for="item in items" :class="item.color" style="border-radius: 0px" :to="item.to" exact :key="item.title">{{item.title}}</v-btn>

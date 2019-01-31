@@ -30,9 +30,9 @@
     name: 'BottomFooter',
     data: () => ({
       icons: [
-        {ico: 'fas fa-github', link: 'https://github.com/ceit93'},
-        {ico: 'mdi-telegram', link: 'https://t.me/ceit93'},
-        {ico: 'alternate_email', link: 'mailto:grad@ceit93.ir'},
+        {ico: 'fab fa-github', link: 'https://github.com/ceit93'},
+        {ico: 'fab fa-telegram-plane', link: 'https://t.me/ceit93'},
+        {ico: 'fas fa-envelope', link: 'mailto:grad@ceit93.ir'},
       ],
       footer: 'دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)',
     }),

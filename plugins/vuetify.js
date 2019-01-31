@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify/lib'
 import colors from 'vuetify/es5/util/colors'
+import '@fortawesome/fontawesome-free/css/all.css' // Ensure you are using css-loader
 
 Vue.use(Vuetify, {
   rtl: true,

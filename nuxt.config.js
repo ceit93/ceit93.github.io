@@ -10,33 +10,46 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    title: 'آیین فارغ‌التحصیلی دانشجویان ورودی ۱۳۹۳',
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      {charset: 'utf-8'},
+      {name: 'viewport', content: 'width=device-width, initial-scale=1'},
+      {name: 'msapplication-TileColor', content: '#ffffff'},
+      {name: 'theme-color', content: '#ffffff'},
+      {hid: 'description', name: 'description', content: 'مجله فارغ‌التحصیلی دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر'},
+      {property: 'og:locale', content: 'fa_IR'},
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'
-      }
+      {rel: 'icon', type: 'image/x-icon', href: 'favicon.ico'},
+      {rel: 'icon', type: 'image/png', href: 'favicon-32x32.png', sizes:'32x32'},
+      {rel: 'icon', type: 'image/png', href: 'favicon-16x16.png', sizes:'16x16'},
+      {rel: 'mask-icon', href: 'safari-pinned-tab.svg', color: '#5bbad5'},
+      {rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-640x1136.png', media:'(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-750x1294.png', media:'(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-1242x2148.png', media:'(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-1125x2436.png', media:'(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-1536x2048.png', media:'(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-1668x2224.png', media:'(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)'},
+      {rel: 'apple-touch-startup-image', href: 'apple-splash-2048x2732.png', media:'(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)'},
+
     ]
   },
-
-  /*
-  ** Customize the progress-bar color
-  */
-  loading: { color: '#fff' },
-
-  /*
-  ** Global CSS
-  */
   css: [
-    '~/assets/style/app.styl'
+    '@/assets/css/main.scss',
+    '@/assets/css/iransharp.css',
   ],
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        return ['script', 'style', 'font'].includes(type)
+      }
+    }
+  },
+  /*
+  ** Customize the progress bar color
+  */
+  loading: {color: '#30fff2'},
 
   /*
   ** Plugins to load before mounting the App

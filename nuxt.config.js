@@ -49,6 +49,8 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/axios',
+    ['@nuxtjs/google-analytics', {id: 'UA-120518365-1'}]
   ],
 
   /*
@@ -62,12 +64,12 @@ module.exports = {
         import: ["~assets/style/variables.styl"]
       }
     },
-    
+
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }

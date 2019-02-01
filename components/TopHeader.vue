@@ -4,7 +4,7 @@
       <v-avatar
         :tile="true"
         :size="50">
-        <img src="logo.png" alt="بهترین وب‌اپلیکیشن فارغ‌التحصیلی">
+        <img src="/icon.png" alt="بهترین وب‌اپلیکیشن فارغ‌التحصیلی">
       </v-avatar>
     </v-btn>
     <v-toolbar-title class="title iransharp">فارغ‌التحصیلی ۹۳</v-toolbar-title>

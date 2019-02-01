@@ -17,7 +17,12 @@ module.exports = {
       {name: 'msapplication-TileColor', content: '#ffffff'},
       {name: 'theme-color', content: '#ffffff'},
       {hid: 'description', name: 'description', content: 'نشریه آنلاین فارغ‌التحصیلی دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)'},
-      {property: 'og:locale', content: 'fa_IR'},
+      {property: 'og:title', content: 'نشریه فارغ‌التحصیلی دانشجویان ورودی ۱۳۹۳'},
+      {property: 'og:description', content: 'نشریه آنلاین فارغ‌التحصیلی دانشجویان ورودی سال ۱۳۹۳ دانشکده مهندسی کامپیوتر و فناوری اطلاعات دانشگاه صنعتی امیرکبیر (پلی‌تکنیک تهران)'},
+      {property: 'og:url', content: 'http://ceit93.github.io'},
+      {property: 'og:image', content: 'http://ceit93.github.io/icon.png'},
+      {property: 'og:type', content: 'website'},
+      {property: 'og:locale', content: 'fa_IR'}
     ],
     link: [
       {rel: 'icon', type: 'image/x-icon', href: 'favicon.ico'},

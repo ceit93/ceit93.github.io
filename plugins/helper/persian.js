@@ -35,7 +35,9 @@ export default {
         return persianJs(str.toString()).halfSpace().toString()
       },
       userName: function(obj){
-        return obj.modified_name ? obj.modified_name : persianJs(obj.name).arabicChar().toString()
+        if (obj)
+          return obj.modified_name ? obj.modified_name : persianJs(obj.name).arabicChar().toString()
+        return "ناشناس!"
       }
     };
   }

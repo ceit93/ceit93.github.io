@@ -1,7 +1,7 @@
 <template>
   <v-content>
-    <v-container fluid>
-      <v-layout row wrap align-start justify-content-center>
+    <v-container>
+      <v-layout justify-content-center>
         <v-flex xs11 md3>
           <div class="text-xs-center">
             <v-avatar tile size="95%">
@@ -13,6 +13,7 @@
             <div class="iranblack text-xs-center pt-2">{{this.$persianJS.englishNumber(user.std_numbers)}}</div>
             <div class="iranblack text-xs-center pb-3"><a :href="`mailto:${user.email}`" target="_blank">{{user.email}}</a> </div>
             <div class="pb-5">
+              <span class="caption">عنو‌ان‌های برتر:</span>
               <div class="light-blue--text" v-for="(tarin, index) in user.topTarin.topTarins" :key="index"
                    v-bind:style="{fontSize: 25-2*index + 'px' }">
                 #{{tarin.name}}
@@ -24,15 +25,15 @@
             </div>
           </div>
         </v-flex>
-        <v-flex xs11 md8>
-          <!--<div v-for="post in user.posts" :key="post._id">-->
-            <!--<post-->
-              <!--v-if="post.approved"-->
-              <!--:postData="post"-->
-              <!--:belongsToLoggedInUser="false"-->
-              <!--:showControls="false">-->
-            <!--</post>-->
-          <!--</div>-->
+        <v-flex xs11 md9>
+          <div v-for="post in user.posts" :key="post._id">
+            <post
+              v-if="post.approved"
+              :postData="post"
+              :belongsToLoggedInUser="false"
+              :showControls="false">
+            </post>
+          </div>
         </v-flex>
       </v-layout>
     </v-container>
@@ -40,8 +41,10 @@
 </template>
 
 <script>
+import Post from '@/components/Post.vue'
 export default {
   name: "slug",
+  components: {Post},
   async asyncData(context) {
     let username = context.params.slug
     return context.$axios.get('/people/'+username+'.json')

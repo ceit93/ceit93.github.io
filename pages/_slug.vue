@@ -1,7 +1,7 @@
 <template>
   <v-content>
     <v-container>
-      <v-layout justify-content-center>
+      <v-layout row wrap align-start justify-content-center>
         <v-flex xs11 md3>
           <div class="text-xs-center">
             <v-avatar tile size="95%">

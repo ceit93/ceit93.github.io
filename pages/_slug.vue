@@ -1,8 +1,8 @@
 <template>
   <v-content>
     <v-container>
-      <v-layout row wrap align-start justify-content-center>
-        <v-flex xs11 md3>
+      <v-layout row wrap class="text-xs-center">
+        <v-flex xs12 md3>
           <div class="text-xs-center">
             <v-avatar tile size="95%">
               <img
@@ -25,7 +25,7 @@
             </div>
           </div>
         </v-flex>
-        <v-flex xs11 md9>
+        <v-flex xs12 md9>
           <div v-for="post in user.posts" :key="post._id">
             <post
               v-if="post.approved"

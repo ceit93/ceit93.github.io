@@ -4,27 +4,26 @@
       <v-card-title primary-title>
         <v-dialog v-model="dialog2" max-width="40vw">
           <v-btn icon slot="activator">
-            <v-avatar :size="50" class="elevation-2">
+            <v-avatar :size="50" class="elevation-2" style="margin-top: -10px">
               <img :src="this.$helper.avatar(postData.user)"
                    :alt="this.$persianJS.userName(postData.user)">
             </v-avatar>
           </v-btn>
           <v-card>
             <v-card-media :src="this.$helper.avatar(postData.user)" height="40vw">
-              <v-layout column class="media">
+              <v-layout column class="media" align-content-space-around>
                 <v-card-title>
                   <v-btn dark icon @click.native="dialog2 = false">
-                    <v-icon color="info">chevron_right</v-icon>
+                    <v-icon color="light-blue darken-2">chevron_right</v-icon>
                   </v-btn>
                   <v-spacer></v-spacer>
+                  <h1 class="text-xs-center hidden-xs-only white--text iranblack">{{this.$persianJS.userName(postData.user)}}</h1>
+                  <v-spacer></v-spacer>
                   <v-btn dark icon class="mr-3" nuxt :to="postData.user ? postData.user.username : 'undefined'">
-                    <v-icon color="info">account_circle</v-icon>
+                    <v-icon color="light-blue darken-2">account_circle</v-icon>
                   </v-btn>
                 </v-card-title>
                 <v-spacer></v-spacer>
-                <v-card-actions class="text-xs-center hidden-xs-only justify-content-center">
-                  <h1 class="text-xs-center blue--text iranblack">{{this.$persianJS.userName(postData.user)}}</h1>
-                </v-card-actions>
               </v-layout>
             </v-card-media>
           </v-card>

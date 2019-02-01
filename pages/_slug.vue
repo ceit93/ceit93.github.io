@@ -48,7 +48,7 @@ export default {
       .then((res) => {
         return {user: res.data}
       }).catch(e => {
-        context.error({statusCode: 500, message: e})
+        context.error({statusCode: 404, message: e})
       })
   },
 }

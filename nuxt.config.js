@@ -69,7 +69,7 @@ module.exports = {
   ],
 
   axios: {
-    // port: '3000',
+    port: '3000',
     prefix: '/data/',
     https: true,
     proxyHeaders: false,
@@ -79,7 +79,7 @@ module.exports = {
 
   generate: {
     routes: function () {
-      return axios.get('/people/index.json')
+      return axios.get('http://localhost:3000/data/people/index.json')
         .then((res) => {
           return res.data.map((user) => {
             return '/' + user.username

@@ -29,7 +29,6 @@
 </template>
 
 <script>
-import people from '@/static/data/people/index.json'
 export default {
   data(){
     return {
@@ -46,7 +45,7 @@ export default {
   computed: {
     studentsArray : function() {
       let res = []
-      for (let person of people){
+      for (let person of this.people){
         person.name = this.$persianJS.userName(person)
         person.avatar = this.$helper.avatar(person)
         res.push(person)
@@ -55,15 +54,15 @@ export default {
       return res
     },
   },
-  // async asyncData (context) {
-  //   return context.$axios.get('/people/index.json')
-  //     .then((res) => {
-  //       return {people: res.data}
-  //     }).catch(e => {
-  //       console.log(e)
-  //       context.error({statusCode: 500, message: e})
-  //     })
-  // },
+  async asyncData (context) {
+    return context.$axios.get('/people/index.json')
+      .then((res) => {
+        return {people: res.data}
+      }).catch(e => {
+        console.log(e)
+        context.error({statusCode: 500, message: e})
+      })
+  },
 }
 </script>
 

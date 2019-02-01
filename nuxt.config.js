@@ -64,18 +64,18 @@ module.exports = {
   ** Nuxt.js modules
   */
   modules: [
-    '@nuxtjs/axios',
+    // '@nuxtjs/axios',
     ['@nuxtjs/google-analytics', {id: 'UA-120518365-1'}]
   ],
 
-  axios: {
-    port: '3000',
-    prefix: '/data/',
-    https: true,
-    proxyHeaders: false,
-    proxy: true, // Can be also an object with default options
-    debug: false
-  },
+  // axios: {
+  //   port: '3000',
+  //   prefix: '/data/',
+  //   https: true,
+  //   proxyHeaders: false,
+  //   proxy: true, // Can be also an object with default options
+  //   debug: false
+  // },
 
   /*
   ** Build configuration
